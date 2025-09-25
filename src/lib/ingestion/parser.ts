@@ -3,52 +3,54 @@ import { RawFlightSchema, FlightSchema, type FlightRecord, type RawFlightRecord 
 
 type KeyAlias = keyof RawFlightRecord;
 
-const HEADER_ALIASES: Record<string, KeyAlias> = {
-  date: 'date',
-  flightdate: 'date',
-  'flight date': 'date',
-  aircraft: 'aircraftModel',
-  'aircraft model': 'aircraftModel',
-  'aircraft type': 'aircraftModel',
-  aircraftmodel: 'aircraftModel',
-  tail: 'tailNumber',
-  tailnumber: 'tailNumber',
-  registration: 'tailNumber',
-  from: 'origin',
-  origin: 'origin',
-  dep: 'origin',
-  departure: 'origin',
-  to: 'destination',
-  destination: 'destination',
-  arr: 'destination',
-  arrival: 'destination',
-  number: 'flightNumber',
-  'flight number': 'flightNumber',
-  total: 'totalTime',
-  'total time': 'totalTime',
-  duration: 'totalTime',
-  hours: 'totalTime',
-  pic: 'pic',
-  'pic time': 'pic',
-  command: 'pic',
-  sic: 'sic',
-  copilot: 'sic',
-  dual: 'dual',
-  instruction: 'dual',
-  night: 'night',
-  ifr: 'ifr',
-  approaches: 'approaches',
-  appr: 'approaches',
-  'landings day': 'landingsDay',
-  'landings (day)': 'landingsDay',
-  'day landings': 'landingsDay',
-  landings: 'landingsDay',
-  'landings night': 'landingsNight',
-  'landings (night)': 'landingsNight',
-  'night landings': 'landingsNight',
-  remarks: 'remarks',
-  notes: 'remarks',
-};
+const HEADER_ALIASES: Record<string, KeyAlias> = Object.fromEntries(
+  Object.entries({
+    date: 'date',
+    flightdate: 'date',
+    'flight date': 'date',
+    aircraft: 'aircraftModel',
+    'aircraft model': 'aircraftModel',
+    'aircraft type': 'aircraftModel',
+    aircraftmodel: 'aircraftModel',
+    tail: 'tailNumber',
+    tailnumber: 'tailNumber',
+    registration: 'tailNumber',
+    from: 'origin',
+    origin: 'origin',
+    dep: 'origin',
+    departure: 'origin',
+    to: 'destination',
+    destination: 'destination',
+    arr: 'destination',
+    arrival: 'destination',
+    number: 'flightNumber',
+    'flight number': 'flightNumber',
+    total: 'totalTime',
+    'total time': 'totalTime',
+    duration: 'totalTime',
+    hours: 'totalTime',
+    pic: 'pic',
+    'pic time': 'pic',
+    command: 'pic',
+    sic: 'sic',
+    copilot: 'sic',
+    dual: 'dual',
+    instruction: 'dual',
+    night: 'night',
+    ifr: 'ifr',
+    approaches: 'approaches',
+    appr: 'approaches',
+    'landings day': 'landingsDay',
+    'landings (day)': 'landingsDay',
+    'day landings': 'landingsDay',
+    landings: 'landingsDay',
+    'landings night': 'landingsNight',
+    'landings (night)': 'landingsNight',
+    'night landings': 'landingsNight',
+    remarks: 'remarks',
+    notes: 'remarks',
+  }).map(([key, alias]) => [normalizeKey(key), alias]),
+) as Record<string, KeyAlias>;
 
 export interface ParseOptions {
   strictColumns?: boolean;
@@ -106,7 +108,8 @@ function normalizeRow(row: Record<string, string>, strictColumns = false): RawFl
   const normalized: RawFlightRecord = {};
 
   Object.entries(row).forEach(([rawKey, rawValue]) => {
-    const alias = HEADER_ALIASES[normalizeKey(rawKey)];
+    const normalizedKey = normalizeKey(rawKey);
+    const alias = HEADER_ALIASES[normalizedKey];
 
     if (!alias) {
       if (strictColumns) {
