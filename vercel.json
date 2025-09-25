@@ -1,0 +1,35 @@
+{
+  "crons": [
+    {
+      "path": "/api/ingest",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/heartbeat",
+      "schedule": "0 * * * *"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; connect-src 'self' https://*.vercel-blob.com ${process.env.DATA_SOURCE_URL ? new URL(process.env.DATA_SOURCE_URL).origin : ''} ${process.env.SENTRY_DSN ? new URL(process.env.SENTRY_DSN).origin : ''}"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "revalidate": 300,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next"
+}

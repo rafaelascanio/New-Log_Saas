@@ -1,0 +1,51 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @testing-library/react-hooks@8.0.1
+npm error Found: @types/react@18.3.24
+npm error node_modules/@types/react
+npm error   peerOptional @types/react@"*" from @radix-ui/react-arrow@1.1.7
+npm error   node_modules/@radix-ui/react-arrow
+npm error     @radix-ui/react-arrow@"1.1.7" from @radix-ui/react-popper@1.2.8
+npm error     node_modules/@radix-ui/react-popper
+npm error       @radix-ui/react-popper@"1.2.8" from @radix-ui/react-menu@2.1.16
+npm error       node_modules/@radix-ui/react-menu
+npm error         @radix-ui/react-menu@"2.1.16" from @radix-ui/react-dropdown-menu@2.1.16
+npm error         node_modules/@radix-ui/react-dropdown-menu
+npm error       2 more (@radix-ui/react-popover, @radix-ui/react-select)
+npm error   peerOptional @types/react@"*" from @radix-ui/react-collection@1.1.7
+npm error   node_modules/@radix-ui/react-collection
+npm error     @radix-ui/react-collection@"1.1.7" from @radix-ui/react-menu@2.1.16
+npm error     node_modules/@radix-ui/react-menu
+npm error       @radix-ui/react-menu@"2.1.16" from @radix-ui/react-dropdown-menu@2.1.16
+npm error       node_modules/@radix-ui/react-dropdown-menu
+npm error         @radix-ui/react-dropdown-menu@"^2.1.16" from the root project
+npm error     @radix-ui/react-collection@"1.1.7" from @radix-ui/react-roving-focus@1.1.11
+npm error     node_modules/@radix-ui/react-roving-focus
+npm error       @radix-ui/react-roving-focus@"1.1.11" from @radix-ui/react-menu@2.1.16
+npm error       node_modules/@radix-ui/react-menu
+npm error         @radix-ui/react-menu@"2.1.16" from @radix-ui/react-dropdown-menu@2.1.16
+npm error         node_modules/@radix-ui/react-dropdown-menu
+npm error       1 more (@radix-ui/react-tabs)
+npm error     1 more (@radix-ui/react-select)
+npm error   36 more (@radix-ui/react-compose-refs, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional @types/react@"^16.9.0 || ^17.0.0" from @testing-library/react-hooks@8.0.1
+npm error node_modules/@testing-library/react-hooks
+npm error   dev @testing-library/react-hooks@"^8.0.1" from the root project
+npm error
+npm error Conflicting peer dependency: @types/react@17.0.88
+npm error node_modules/@types/react
+npm error   peerOptional @types/react@"^16.9.0 || ^17.0.0" from @testing-library/react-hooks@8.0.1
+npm error   node_modules/@testing-library/react-hooks
+npm error     dev @testing-library/react-hooks@"^8.0.1" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\rafae\AppData\Local\npm-cache\_logs\2025-09-25T09_42_56_881Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\rafae\AppData\Local\npm-cache\_logs\2025-09-25T09_42_56_881Z-debug-0.log
