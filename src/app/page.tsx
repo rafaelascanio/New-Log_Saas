@@ -1,57 +1,60 @@
-import React from "react";
+import PilotGrid from "@/components/PilotGrid";
+
+export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 type Metrics = {
   summary: { totalFlights: number; totalHours: number };
   pilots: {
-    id: string; name: string; totalFlights: number; totalHours: number;
-    lastFlightDate?: string; aircraftTypes?: string[];
+    id: string;
+    name: string;
+    totalFlights: number;
+    totalHours: number;
+    lastFlightDate?: string;
+    flights?: any[];
   }[];
 };
 
-async function getMetrics(): Promise<Metrics> {
+async function loadMetrics(): Promise<Metrics> {
   const base = process.env.NEXT_PUBLIC_BLOB_URL_BASE!;
-  const res = await fetch(`${base}/metrics.json?ts=${Date.now()}`, { cache: "no-store" });
-  if (!res.ok) throw new Error(`metrics fetch failed: ${res.status}`);
-  const metrics = await res.json();
-  return metrics;
+  const r = await fetch(`${base}/metrics.json?ts=${Date.now()}`, { cache: "no-store" });
+  if (!r.ok) throw new Error(`metrics.json ${r.status}`);
+  return r.json();
 }
 
 export default async function Page() {
-  const m = await getMetrics();
+  try {
+    const m = await loadMetrics();
 
-  return (
-    <main className="mx-auto max-w-7xl p-6 space-y-6">
-      {/* Top summary */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="rounded-2xl border p-4">
-          <div className="text-sm opacity-70">Total Flights</div>
-          <div className="text-3xl font-semibold">{m.summary.totalFlights}</div>
-        </div>
-        <div className="rounded-2xl border p-4">
-          <div className="text-sm opacity-70">Total Hours</div>
-          <div className="text-3xl font-semibold">{m.summary.totalHours}</div>
-        </div>
-      </section>
+    return (
+      <main className="mx-auto max-w-7xl p-6 space-y-6">
+        <h1 className="text-2xl font-semibold">Dashboard</h1>
 
-      {/* One card per pilot */}
-      <section>
-        <h2 className="text-xl font-semibold mb-3">Pilots</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          {m.pilots.map(p => (
-            <a key={p.id} href={`/pilot/${p.id}`} className="rounded-2xl border p-4 hover:shadow-sm">
-              <div className="text-lg font-semibold">{p.name}</div>
-              <div className="text-sm opacity-70">Flights: {p.totalFlights}</div>
-              <div className="text-sm opacity-70">Hours: {p.totalHours}</div>
-              <div className="text-sm opacity-70">
-                Last flight: {p.lastFlightDate ?? "—"}
-              </div>
-              {!!p.aircraftTypes?.length && (
-                <div className="text-xs mt-2 opacity-70">Types: {p.aircraftTypes.join(", ")}</div>
-              )}
-            </a>
-          ))}
+        {/* Summary */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="rounded-2xl border p-4">
+            <div className="text-sm opacity-70">Total Flights</div>
+            <div className="text-3xl font-semibold">{m.summary?.totalFlights ?? 0}</div>
+          </div>
+          <div className="rounded-2xl border p-4">
+            <div className="text-sm opacity-70">Total Hours</div>
+            <div className="text-3xl font-semibold">{m.summary?.totalHours ?? 0}</div>
+          </div>
+        </section>
+
+        {/* Pilots */}
+        <PilotGrid pilots={m.pilots || []} />
+      </main>
+    );
+  } catch (error) {
+    console.error("Failed to load metrics", error);
+    return (
+      <main className="mx-auto max-w-3xl p-6 space-y-4">
+        <h1 className="text-2xl font-semibold">Dashboard</h1>
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          We couldn't load the latest metrics. Please try refreshing the page.
         </div>
-      </section>
-    </main>
-  );
+      </main>
+    );
+  }
 }
