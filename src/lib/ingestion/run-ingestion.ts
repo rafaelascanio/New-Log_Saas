@@ -1,7 +1,6 @@
 import { put, type PutBlobResult } from '@vercel/blob';
-import { buildMetrics } from './metrics';
-import { parseCsvFlights } from './parser';
-import type { Metrics } from './schema';
+import { buildMetrics, type Row } from './metrics';
+import { parse } from 'csv-parse/sync';
 
 export interface RunIngestionOptions {
   dataSourceUrl: string;
@@ -10,10 +9,11 @@ export interface RunIngestionOptions {
   putImpl?: typeof put;
   now?: Date;
   dryRun?: boolean;
+  pilotName?: string;
 }
 
 export interface RunIngestionResult {
-  metrics: Metrics;
+  metrics: any;
   blob?: PutBlobResult;
 }
 
@@ -25,6 +25,7 @@ export async function runIngestion(options: RunIngestionOptions): Promise<RunIng
     putImpl,
     now = new Date(),
     dryRun = false,
+    pilotName,
   } = options;
 
   const response = await fetchImpl(dataSourceUrl);
@@ -34,24 +35,24 @@ export async function runIngestion(options: RunIngestionOptions): Promise<RunIng
   }
 
   const csv = await response.text();
-  const parseResult = parseCsvFlights(csv);
+  const rows = parse(csv, {
+    columns: true,
+    skip_empty_lines: true,
+    trim: true,
+  }) as Row[];
 
-  if (parseResult.flights.length === 0) {
+  if (rows.length === 0) {
     throw new Error('No valid flight data found in the data source');
   }
 
-  const metrics = buildMetrics(parseResult.flights, {
-    sourceUrl: dataSourceUrl,
-    totalRows: parseResult.totalRows,
-    issues: parseResult.issues,
-    now,
-  });
+  const metrics = buildMetrics(rows);
 
   let blob: PutBlobResult | undefined;
 
   if (!dryRun) {
     const writer = putImpl ?? put;
-    blob = await writer(blobKey, JSON.stringify(metrics, null, 2), {
+    const key = pilotName ? `metrics-${pilotName}.json` : blobKey;
+    blob = await writer(key, JSON.stringify(metrics, null, 2), {
       access: 'public',
       contentType: 'application/json',
       allowOverwrite: true,

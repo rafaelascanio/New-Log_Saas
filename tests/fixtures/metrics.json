@@ -1,0 +1,127 @@
+{
+  "updatedAt": "2024-03-10T12:00:00.000Z",
+  "source": {
+    "url": "https://example.com/data.csv",
+    "rows": {
+      "total": 3,
+      "valid": 2,
+      "invalid": 1
+    }
+  },
+  "recency": {
+    "latestFlightDate": "2024-03-04T00:00:00.000Z",
+    "daysSinceLastFlight": 6,
+    "stale": true
+  },
+  "totals": {
+    "flights": 2,
+    "totalHours": 3.7,
+    "picHours": 3.7,
+    "sicHours": 0,
+    "dualHours": 0,
+    "nightHours": 0.5,
+    "ifrHours": 1.2,
+    "approaches": 2,
+    "dayLandings": 2,
+    "nightLandings": 0
+  },
+  "rollingTotals": {
+    "last7Days": 2.5,
+    "last30Days": 3.7,
+    "last90Days": 3.7
+  },
+  "byAircraft": {
+    "C172": {
+      "flights": 1,
+      "hours": 2.5,
+      "picHours": 2.5,
+      "nightHours": 0.5
+    },
+    "SR22": {
+      "flights": 1,
+      "hours": 1.2,
+      "picHours": 1.2,
+      "nightHours": 0
+    }
+  },
+  "byMonth": [
+    {
+      "month": "2024-02",
+      "flights": 1,
+      "hours": 1.2
+    },
+    {
+      "month": "2024-03",
+      "flights": 1,
+      "hours": 2.5
+    }
+  ],
+  "issues": [
+    {
+      "rowNumber": 4,
+      "errors": [
+        "Expected a non-negative number"
+      ]
+    }
+  ],
+  "flights": [
+    {
+      "id": "rafael-ascanio-2024-03-04-kpdx-ksfo-1",
+      "pilotId": "rafael-ascanio",
+      "pilotName": "Rafael Ascanio",
+      "date": "2024-03-04T00:00:00.000Z",
+      "aircraftModel": "C172",
+      "tailNumber": "N12345",
+      "origin": "KPDX",
+      "destination": "KSFO",
+      "flightNumber": null,
+      "remarks": "Training flight",
+      "totalHours": 2.5,
+      "picHours": 2.5,
+      "sicHours": 0,
+      "nightHours": 0.5,
+      "ifrHours": 1,
+      "approaches": 2,
+      "dayLandings": 1,
+      "nightLandings": 0
+    },
+    {
+      "id": "john-doe-2024-02-15-ksfo-krno-2",
+      "pilotId": "john-doe",
+      "pilotName": "John Doe",
+      "date": "2024-02-15T00:00:00.000Z",
+      "aircraftModel": "SR22",
+      "tailNumber": "N54321",
+      "origin": "KSFO",
+      "destination": "KRNO",
+      "flightNumber": null,
+      "remarks": "Proficiency",
+      "totalHours": 1.2,
+      "picHours": 1.2,
+      "sicHours": 0,
+      "nightHours": 0,
+      "ifrHours": 0.2,
+      "approaches": 0,
+      "dayLandings": 1,
+      "nightLandings": 0
+    }
+  ],
+  "pilots": [
+    {
+      "id": "rafael-ascanio",
+      "name": "Rafael Ascanio",
+      "totalHours": 2.5,
+      "picHours": 2.5,
+      "flightCount": 1,
+      "lastFlightDate": "2024-03-04T00:00:00.000Z"
+    },
+    {
+      "id": "john-doe",
+      "name": "John Doe",
+      "totalHours": 1.2,
+      "picHours": 1.2,
+      "flightCount": 1,
+      "lastFlightDate": "2024-02-15T00:00:00.000Z"
+    }
+  ]
+}

@@ -1,93 +1,57 @@
-import { runIngestion } from '@/src/lib/ingestion';
-import { Metrics } from '@/src/lib/ingestion/schema';
+import React from "react";
+
+type Metrics = {
+  summary: { totalFlights: number; totalHours: number };
+  pilots: {
+    id: string; name: string; totalFlights: number; totalHours: number;
+    lastFlightDate?: string; aircraftTypes?: string[];
+  }[];
+};
 
 async function getMetrics(): Promise<Metrics> {
-  const dataSourceUrl = process.env.DATA_SOURCE_URL;
-  if (!dataSourceUrl) {
-    throw new Error('DATA_SOURCE_URL is not defined in the environment variables.');
-  }
-
-  // We are running this on the server, so we can use the Vercel Blob SDK
-  // The runIngestion function will use the `put` function from `@vercel/blob`
-  // which should be configured with the environment variables.
-  const result = await runIngestion({ dataSourceUrl });
-  return result.metrics;
+  const base = process.env.NEXT_PUBLIC_BLOB_URL_BASE!;
+  const res = await fetch(`${base}/metrics.json?ts=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`metrics fetch failed: ${res.status}`);
+  const metrics = await res.json();
+  return metrics;
 }
 
 export default async function Page() {
-  const metrics = await getMetrics();
+  const m = await getMetrics();
 
   return (
-    <div style={{ fontFamily: 'sans-serif', padding: '2rem' }}>
-      <header style={{ marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Flight Log Dashboard</h1>
-        <p style={{ color: '#666' }}>Last updated: {new Date(metrics.updatedAt).toLocaleString()}</p>
-      </header>
+    <main className="mx-auto max-w-7xl p-6 space-y-6">
+      {/* Top summary */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="rounded-2xl border p-4">
+          <div className="text-sm opacity-70">Total Flights</div>
+          <div className="text-3xl font-semibold">{m.summary.totalFlights}</div>
+        </div>
+        <div className="rounded-2xl border p-4">
+          <div className="text-sm opacity-70">Total Hours</div>
+          <div className="text-3xl font-semibold">{m.summary.totalHours}</div>
+        </div>
+      </section>
 
-      <main>
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Totals</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Flights</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.totals.flights}</p>
-            </div>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Total Hours</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.totals.totalHours.toFixed(1)}</p>
-            </div>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>PIC Hours</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.totals.picHours.toFixed(1)}</p>
-            </div>
-            {/* Add more totals as needed */}
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Rolling Totals</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Last 7 Days</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.rollingTotals.last7Days.toFixed(1)}</p>
-            </div>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Last 30 Days</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.rollingTotals.last30Days.toFixed(1)}</p>
-            </div>
-            <div style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Last 90 Days</h3>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>{metrics.rollingTotals.last90Days.toFixed(1)}</p>
-            </div>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>By Aircraft</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-            {Object.entries(metrics.byAircraft).map(([aircraft, data]) => (
-              <div key={aircraft} style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{aircraft}</h3>
-                <p>Flights: {data.flights}</p>
-                <p>Hours: {data.hours.toFixed(1)}</p>
+      {/* One card per pilot */}
+      <section>
+        <h2 className="text-xl font-semibold mb-3">Pilots</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          {m.pilots.map(p => (
+            <a key={p.id} href={`/pilot/${p.id}`} className="rounded-2xl border p-4 hover:shadow-sm">
+              <div className="text-lg font-semibold">{p.name}</div>
+              <div className="text-sm opacity-70">Flights: {p.totalFlights}</div>
+              <div className="text-sm opacity-70">Hours: {p.totalHours}</div>
+              <div className="text-sm opacity-70">
+                Last flight: {p.lastFlightDate ?? "—"}
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>By Month</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-            {metrics.byMonth.map((data) => (
-              <div key={data.month} style={{ border: '1px solid #eee', padding: '1rem', borderRadius: '0.5rem' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{data.month}</h3>
-                <p>Flights: {data.flights}</p>
-                <p>Hours: {data.hours.toFixed(1)}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-    </div>
+              {!!p.aircraftTypes?.length && (
+                <div className="text-xs mt-2 opacity-70">Types: {p.aircraftTypes.join(", ")}</div>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

@@ -45,7 +45,7 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'npm run dev',
+    command: 'cross-env METRICS_FIXTURE_PATH=tests/fixtures/metrics.json npm run dev',
     port: 3000,
     reuseExistingServer: !process.env.CI,
   },
