@@ -16,6 +16,13 @@ const NumberFromCsv = z.preprocess((value) => {
       return 0;
     }
 
+    if (trimmed.includes(':')) {
+      const [hours, minutes] = trimmed.split(':').map(Number);
+      if (!Number.isNaN(hours) && !Number.isNaN(minutes)) {
+        return hours + minutes / 60;
+      }
+    }
+
     const normalized = trimmed.replace(/,/g, '');
     const parsed = Number(normalized);
 

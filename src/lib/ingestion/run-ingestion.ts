@@ -54,6 +54,7 @@ export async function runIngestion(options: RunIngestionOptions): Promise<RunIng
     blob = await writer(blobKey, JSON.stringify(metrics, null, 2), {
       access: 'public',
       contentType: 'application/json',
+      allowOverwrite: true,
     });
   }
 
@@ -62,4 +63,3 @@ export async function runIngestion(options: RunIngestionOptions): Promise<RunIng
     blob,
   };
 }
-

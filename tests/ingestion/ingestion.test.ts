@@ -4,7 +4,7 @@ import { buildMetrics, parseCsvFlights, runIngestion } from '@/src/lib/ingestion
 type PutFunction = (typeof import('@vercel/blob'))['put'];
 
 const SAMPLE_CSV = `Date,Aircraft,Registration,From,To,Total Time,PIC,SIC,Night,IFR,Approaches,Landings (Day),Landings (Night),Remarks
-2024-03-01,C172,N12345,KPDX,KSFO,2.5,2.5,0,0.5,1,2,1,0,Training flight
+2024-03-04,C172,N12345,KPDX,KSFO,2.5,2.5,0,0.5,1,2,1,0,Training flight
 2024-02-15,SR22,N54321,KSFO,KRNO,1.2,1.2,0,0,0.2,0,1,0,Proficiency
 2024-02-10,C172,,KBUR,KVNY,-1,0,0,0,0,0,0,0,Data error`;
 
