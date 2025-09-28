@@ -95,7 +95,7 @@ export default async function Page({
       <main className="mx-auto max-w-3xl p-6 space-y-4">
         <h1 className="text-2xl font-semibold">Pilot Logbook</h1>
         <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          We couldn't load the latest metrics. Please try refreshing the page.
+          {"It isn't loaded"}
         </div>
       </main>
     );
