@@ -1,9 +1,6 @@
 "use client";
 
-type Pilot = Record<string, unknown>;
-
-export default function CertificationsCard({ pilot }: { pilot: Pilot }) {
-  void pilot;
+export default function CertificationsCard() {
   const items = [
     { label: "Solo Flight Endorsement", ok: true },
     { label: "Medical Certificate: Valid", ok: true },
@@ -17,9 +14,7 @@ export default function CertificationsCard({ pilot }: { pilot: Pilot }) {
       <ul className="space-y-2 text-sm">
         {items.map((it, i) => (
           <li key={i} className="flex items-center gap-2">
-            <span
-              className={`inline-block h-2 w-2 rounded-full ${it.ok ? "bg-green-500" : "bg-yellow-500"}`}
-            />
+            <span className={`inline-block h-2 w-2 rounded-full ${it.ok ? "bg-green-500" : "bg-yellow-500"}`} />
             <span>{it.label}</span>
           </li>
         ))}

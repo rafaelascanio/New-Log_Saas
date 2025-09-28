@@ -66,7 +66,11 @@ export default function PilotGrid({ pilots }: { pilots: Pilot[] }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {filtered.map((p) => (
-          <a key={p.id} href={`/pilot/${p.id}`} className="rounded-2xl border p-4 hover:shadow-sm">
+          <a
+            key={p.id}
+            href={`/?pilotId=${encodeURIComponent(p.id)}`}
+            className="rounded-2xl border p-4 hover:shadow-sm"
+          >
             <div className="text-lg font-semibold">{p.name}</div>
             <div className="text-sm opacity-70">Flights: {p.totalFlights}</div>
             <div className="text-sm opacity-70">Hours: {p.totalHours}</div>
