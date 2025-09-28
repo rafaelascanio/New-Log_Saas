@@ -60,11 +60,21 @@ export default async function Page({
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-2xl border p-4">
               <div className="text-sm opacity-70">Flights</div>
-              <div className="text-3xl font-semibold">{metrics.summary?.totalFlights ?? 0}</div>
+              <div
+                className="text-3xl font-semibold"
+                data-testid="summary-total-flights"
+              >
+                {metrics.summary?.totalFlights ?? 0}
+              </div>
             </div>
             <div className="rounded-2xl border p-4">
               <div className="text-sm opacity-70">Total Hours</div>
-              <div className="text-3xl font-semibold">{metrics.summary?.totalHours ?? 0}</div>
+              <div
+                className="text-3xl font-semibold"
+                data-testid="summary-total-hours"
+              >
+                {metrics.summary?.totalHours ?? 0}
+              </div>
             </div>
           </section>
 

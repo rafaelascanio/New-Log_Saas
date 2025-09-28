@@ -12,7 +12,9 @@
     "format:check": "prettier --check .",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
     "test:coverage": "vitest run --coverage",
+    "qa:harness": "playwright test --config=tests/qa-harness.config.ts",
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
