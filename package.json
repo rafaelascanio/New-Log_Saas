@@ -15,7 +15,8 @@
     "test:e2e": "playwright test",
     "test:coverage": "vitest run --coverage",
     "qa:harness": "playwright test --config=tests/qa-harness.config.ts",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "qa" : "node scripts/qa-verify.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

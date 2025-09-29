@@ -1,0 +1,2423 @@
+{
+  "pilots": [
+    {
+      "id": "rafael_ascanio",
+      "name": "Rafael Ascanio",
+      "licenseNumber": "CL-PPL-00123",
+      "nationality": "Chile",
+      "dateOfBirth": "4/12/1990",
+      "licenseType": "PPL(A)",
+      "licenseIssueDate": "6/15/2020",
+      "licenseExpiryDate": "6/15/2026",
+      "totalFlights": 24,
+      "totalHours": 53.94,
+      "dayHours": 36.14,
+      "nightHours": 17.8,
+      "picHours": 53.94,
+      "sicHours": 0,
+      "ifrHours": 26.24,
+      "aircraftTypes": [
+        "Cessna Citation M2",
+        "Piper PA-34 Seneca",
+        "Embraer Phenom 300",
+        "Robinson R44",
+        "Schleicher ASK 21",
+        "Diamond DA40",
+        "Airbus H125",
+        "Beechcraft Baron 58",
+        "Pilatus PC-12",
+        "Cessna 182T",
+        "Cessna 172N",
+        "Bristell B23",
+        "Tecnam P92",
+        "Ozone Delta 4 (Paraglider)"
+      ],
+      "lastFlightDate": "2025-08-17",
+      "flights": [
+        {
+          "date": "2025-04-29",
+          "aircraft": "Cessna Citation M2",
+          "aircraftReg": "CC-TGD",
+          "route": "SCSE -> SCVD",
+          "hours": 2.2,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-02-17",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-QJJ",
+          "route": "SCAR -> SCVD",
+          "hours": 1.88,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-08-01",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-PKP",
+          "route": "SCJO -> SCCI",
+          "hours": 0.95,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-05-13",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-SKR",
+          "route": "SCCF -> SCTE",
+          "hours": 3.65,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-11-02",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-BZV",
+          "route": "SCSE -> SAEZ",
+          "hours": 1.12,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-06",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-LYY",
+          "route": "SCEL -> SCTE",
+          "hours": 1.73,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-21",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-OCY",
+          "route": "SCVD -> SCDA",
+          "hours": 3.12,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-08-21",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-YCZ",
+          "route": "SCDA -> SCBA",
+          "hours": 2.87,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-11",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-UYT",
+          "route": "SCBA -> SCSE",
+          "hours": 2.43,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-08-11",
+          "aircraft": "Beechcraft Baron 58",
+          "aircraftReg": "CC-VHU",
+          "route": "SCJO -> SCVD",
+          "hours": 2.17,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-09-25",
+          "aircraft": "Cessna Citation M2",
+          "aircraftReg": "CC-WEG",
+          "route": "SCCF -> SCAR",
+          "hours": 1.92,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-16",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-UOB",
+          "route": "SCTE -> SCIE",
+          "hours": 1.23,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-04-16",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-MTR",
+          "route": "SCBA -> SPJC",
+          "hours": 3.57,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-02-05",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-GWC",
+          "route": "SCSE -> SCJO",
+          "hours": 1.4,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-07-13",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-LOQ",
+          "route": "SCFA -> SCDA",
+          "hours": 1.8,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-14",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-IIZ",
+          "route": "SCIE -> SCCI",
+          "hours": 2.5,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-08-17",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-WLM",
+          "route": "SCCF -> SCCI",
+          "hours": 1.87,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-12-12",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-QXZ",
+          "route": "SCVD -> SCSE",
+          "hours": 1.98,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-13",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-ZWC",
+          "route": "SCIE -> SCBA",
+          "hours": 1.97,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-26",
+          "aircraft": "Bristell B23",
+          "aircraftReg": "CC-GVM",
+          "route": "SPJC -> SCFA",
+          "hours": 1.62,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-05-25",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-PSX",
+          "route": "SCBA -> SCSE",
+          "hours": 3.4,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-04-16",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-NTM",
+          "route": "SPJC -> SCCF",
+          "hours": 2.4,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-09-18",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-YRM",
+          "route": "SCSE -> SCDA",
+          "hours": 2.93,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-06",
+          "aircraft": "Ozone Delta 4 (Paraglider)",
+          "aircraftReg": "CC-TFK",
+          "route": "SCCF -> SCDA",
+          "hours": 3.23,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "maria_valenzuela",
+      "name": "María Valenzuela",
+      "licenseNumber": "CL-CPL-00456",
+      "nationality": "Chile",
+      "dateOfBirth": "10/3/1987",
+      "licenseType": "CPL(A) IR",
+      "licenseIssueDate": "9/1/2019",
+      "licenseExpiryDate": "9/1/2025",
+      "totalFlights": 24,
+      "totalHours": 56.83,
+      "dayHours": 45.35,
+      "nightHours": 11.48,
+      "picHours": 56.83,
+      "sicHours": 0,
+      "ifrHours": 23.7,
+      "aircraftTypes": [
+        "Beechcraft Baron 58",
+        "Piper PA-34 Seneca",
+        "Tecnam P92",
+        "Diamond DA40",
+        "Cessna 172N",
+        "Cessna 208B Grand Caravan",
+        "Airbus H125",
+        "Embraer Phenom 300",
+        "Tecnam P2008",
+        "Cessna 182T",
+        "Beechcraft King Air C90",
+        "Robinson R44",
+        "Bristell B23",
+        "Schleicher ASK 21",
+        "Pilatus PC-12"
+      ],
+      "lastFlightDate": "2025-08-23",
+      "flights": [
+        {
+          "date": "2024-12-05",
+          "aircraft": "Beechcraft Baron 58",
+          "aircraftReg": "CC-CGP",
+          "route": "SCTE -> SCAR",
+          "hours": 2.43,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-04-24",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-ZQO",
+          "route": "SCBA -> SCCF",
+          "hours": 2.68,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-07-04",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-TIH",
+          "route": "SCDA -> SCTE",
+          "hours": 2.22,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-11-14",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-AOP",
+          "route": "SCEL -> SCDA",
+          "hours": 2.42,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-07-02",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-ZGU",
+          "route": "SCJO -> SCFA",
+          "hours": 2.03,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-08-23",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-DJB",
+          "route": "SCAR -> SCIE",
+          "hours": 2.92,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-08-30",
+          "aircraft": "Cessna 208B Grand Caravan",
+          "aircraftReg": "CC-DIX",
+          "route": "SPJC -> SCEL",
+          "hours": 2.13,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2023-09-04",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-LZD",
+          "route": "SCCI -> SCAR",
+          "hours": 1.45,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2023-11-16",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-CYG",
+          "route": "SCFA -> SCAR",
+          "hours": 3.47,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-10-24",
+          "aircraft": "Tecnam P2008",
+          "aircraftReg": "CC-CDJ",
+          "route": "SCDA -> SPJC",
+          "hours": 1.07,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-01",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-GCA",
+          "route": "SCTE -> SCEL",
+          "hours": 2.62,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-30",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-QVS",
+          "route": "SCIE -> SCDA",
+          "hours": 2.58,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-04-26",
+          "aircraft": "Beechcraft Baron 58",
+          "aircraftReg": "CC-HPM",
+          "route": "SCTE -> SCCF",
+          "hours": 2.75,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-09-26",
+          "aircraft": "Tecnam P2008",
+          "aircraftReg": "CC-YCG",
+          "route": "SCTE -> SAEZ",
+          "hours": 2.9,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-07",
+          "aircraft": "Beechcraft King Air C90",
+          "aircraftReg": "CC-XLM",
+          "route": "SCFA -> SPJC",
+          "hours": 1.88,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-18",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-QTF",
+          "route": "SCTE -> SCDA",
+          "hours": 3.93,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-13",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-GUB",
+          "route": "SCVD -> SCJO",
+          "hours": 2.5,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-09-20",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-LSX",
+          "route": "SCEL -> SCIE",
+          "hours": 0.57,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-15",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-AVK",
+          "route": "SCEL -> SCBA",
+          "hours": 3.03,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-22",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-ZUJ",
+          "route": "SPJC -> SCIE",
+          "hours": 0.67,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-08-05",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-AJL",
+          "route": "SCAR -> SCIE",
+          "hours": 1.73,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-10-18",
+          "aircraft": "Bristell B23",
+          "aircraftReg": "CC-SXR",
+          "route": "SCFA -> SCTE",
+          "hours": 3.1,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-06-23",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-POI",
+          "route": "SCSE -> SCJO",
+          "hours": 2.47,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-16",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-ETB",
+          "route": "SCSE -> SCCF",
+          "hours": 3.28,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "javier_rios",
+      "name": "Javier Ríos",
+      "licenseNumber": "CL-ATPL-00789",
+      "nationality": "Chile",
+      "dateOfBirth": "1/25/1982",
+      "licenseType": "ATPL(A)",
+      "licenseIssueDate": "3/20/2015",
+      "licenseExpiryDate": "3/20/2027",
+      "totalFlights": 24,
+      "totalHours": 56.85,
+      "dayHours": 51.81,
+      "nightHours": 5.04,
+      "picHours": 56.85,
+      "sicHours": 0,
+      "ifrHours": 14.7,
+      "aircraftTypes": [
+        "Pilatus PC-12",
+        "DG-1000",
+        "Schleicher ASK 21",
+        "Cessna 208B Grand Caravan",
+        "Cessna 172N",
+        "Tecnam P2008",
+        "Airbus H125",
+        "Beechcraft King Air C90",
+        "Diamond DA42",
+        "Cessna 182T",
+        "Piper PA-28-181 Archer",
+        "Piper PA-34 Seneca",
+        "Robinson R44",
+        "Beechcraft Baron 58",
+        "Diamond DA40"
+      ],
+      "lastFlightDate": "2025-07-28",
+      "flights": [
+        {
+          "date": "2023-12-11",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-TEK",
+          "route": "SCFA -> SCDA",
+          "hours": 3.17,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-04-07",
+          "aircraft": "DG-1000",
+          "aircraftReg": "CC-KBX",
+          "route": "SCCI -> SPJC",
+          "hours": 0.72,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-01-15",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-DTO",
+          "route": "SPJC -> SCTE",
+          "hours": 0.93,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-03-15",
+          "aircraft": "Cessna 208B Grand Caravan",
+          "aircraftReg": "CC-RFD",
+          "route": "SCCI -> SCBA",
+          "hours": 3.93,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-29",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-POT",
+          "route": "SCEL -> SCSE",
+          "hours": 3.17,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-12-21",
+          "aircraft": "Tecnam P2008",
+          "aircraftReg": "CC-AVH",
+          "route": "SCBA -> SCSE",
+          "hours": 2.95,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-05-14",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-ZTY",
+          "route": "SCAR -> SCDA",
+          "hours": 1.38,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-02",
+          "aircraft": "Beechcraft King Air C90",
+          "aircraftReg": "CC-RYT",
+          "route": "SCAR -> SCIE",
+          "hours": 2.28,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-05",
+          "aircraft": "Diamond DA42",
+          "aircraftReg": "CC-OSJ",
+          "route": "SCIE -> SCAR",
+          "hours": 2.88,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-05",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-KFK",
+          "route": "SPJC -> SCCI",
+          "hours": 1.45,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-02",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-YFA",
+          "route": "SCDA -> SCFA",
+          "hours": 1.43,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-05-11",
+          "aircraft": "Tecnam P2008",
+          "aircraftReg": "CC-UMV",
+          "route": "SCCI -> SCFA",
+          "hours": 0.5,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-04-11",
+          "aircraft": "Piper PA-28-181 Archer",
+          "aircraftReg": "CC-ITY",
+          "route": "SCVD -> SCDA",
+          "hours": 3.9,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-04",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-HPL",
+          "route": "SCCI -> SCBA",
+          "hours": 2.07,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-22",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-TPA",
+          "route": "SCAR -> SCVD",
+          "hours": 3,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-25",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-IAK",
+          "route": "SCAR -> SCSE",
+          "hours": 2.4,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-11-26",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-MAN",
+          "route": "SCCI -> SCCF",
+          "hours": 2.67,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-22",
+          "aircraft": "Beechcraft Baron 58",
+          "aircraftReg": "CC-NOU",
+          "route": "SCDA -> SCAR",
+          "hours": 3.02,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-28",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-UFU",
+          "route": "SCAR -> SCVD",
+          "hours": 1.6,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-12-28",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-PVY",
+          "route": "SCSE -> SCVD",
+          "hours": 3.98,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-05-09",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-BHZ",
+          "route": "SAEZ -> SCJO",
+          "hours": 3.52,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-03",
+          "aircraft": "Beechcraft Baron 58",
+          "aircraftReg": "CC-MXB",
+          "route": "SCSE -> SCIE",
+          "hours": 2.73,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-08-26",
+          "aircraft": "Cessna 208B Grand Caravan",
+          "aircraftReg": "CC-CNE",
+          "route": "SCJO -> SCAR",
+          "hours": 1.92,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-07-14",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-FNI",
+          "route": "SCSE -> SCCF",
+          "hours": 1.25,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "camila_torres",
+      "name": "Camila Torres",
+      "licenseNumber": "CL-PPL-00234",
+      "nationality": "Chile",
+      "dateOfBirth": "8/19/1994",
+      "licenseType": "PPL(H)",
+      "licenseIssueDate": "11/11/2021",
+      "licenseExpiryDate": "11/11/2027",
+      "totalFlights": 24,
+      "totalHours": 48.33,
+      "dayHours": 35.26,
+      "nightHours": 13.07,
+      "picHours": 48.33,
+      "sicHours": 0,
+      "ifrHours": 17.51,
+      "aircraftTypes": [
+        "Diamond DA40",
+        "Embraer Phenom 300",
+        "Cessna 182T",
+        "Bristell B23",
+        "Robinson R44",
+        "Cessna 172N",
+        "Cessna Citation M2",
+        "Beechcraft King Air C90",
+        "Tecnam P92",
+        "Schleicher ASK 21",
+        "Airbus H125",
+        "Tecnam P2008",
+        "Ozone Delta 4 (Paraglider)",
+        "DG-1000"
+      ],
+      "lastFlightDate": "2025-08-08",
+      "flights": [
+        {
+          "date": "2023-11-22",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-PUS",
+          "route": "SCTE -> SCSE",
+          "hours": 3.95,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-23",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-XQD",
+          "route": "SCDA -> SCFA",
+          "hours": 0.88,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-11-12",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-WVH",
+          "route": "SCEL -> SCFA",
+          "hours": 2.68,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-08-15",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-JKW",
+          "route": "SCEL -> SCVD",
+          "hours": 1.13,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-10-13",
+          "aircraft": "Bristell B23",
+          "aircraftReg": "CC-BNW",
+          "route": "SCSE -> SCBA",
+          "hours": 1.18,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-10-25",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-HPS",
+          "route": "SCAR -> SCVD",
+          "hours": 0.85,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-09",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-JBM",
+          "route": "SCAR -> SCTE",
+          "hours": 0.77,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-03-17",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-SHI",
+          "route": "SCIE -> SCCF",
+          "hours": 2.25,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-12-21",
+          "aircraft": "Cessna Citation M2",
+          "aircraftReg": "CC-UFU",
+          "route": "SCVD -> SCTE",
+          "hours": 1.63,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-10-05",
+          "aircraft": "Beechcraft King Air C90",
+          "aircraftReg": "CC-OPF",
+          "route": "SCAR -> SCCF",
+          "hours": 3.83,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-27",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-STE",
+          "route": "SCCI -> SPJC",
+          "hours": 1.75,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-08-31",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-HLT",
+          "route": "SCCI -> SCBA",
+          "hours": 1.45,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-01-10",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-SZN",
+          "route": "SCFA -> SCSE",
+          "hours": 1.42,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-08-08",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-EEB",
+          "route": "SCEL -> SCJO",
+          "hours": 1.43,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-10-25",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-TEN",
+          "route": "SCJO -> SCFA",
+          "hours": 3.07,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-08",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-NHV",
+          "route": "SCJO -> SCAR",
+          "hours": 0.73,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-05-31",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-ADW",
+          "route": "SCDA -> SCSE",
+          "hours": 2.72,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-07-27",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-QLR",
+          "route": "SPJC -> SCJO",
+          "hours": 2.77,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-12-04",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-QXQ",
+          "route": "SCFA -> SAEZ",
+          "hours": 3.57,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2023-12-31",
+          "aircraft": "Tecnam P2008",
+          "aircraftReg": "CC-IPQ",
+          "route": "SCBA -> SCJO",
+          "hours": 2.25,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-01-29",
+          "aircraft": "Ozone Delta 4 (Paraglider)",
+          "aircraftReg": "CC-BTF",
+          "route": "SCAR -> SCFA",
+          "hours": 1.3,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-04",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-JPH",
+          "route": "SCTE -> SCBA",
+          "hours": 1.6,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-05-18",
+          "aircraft": "DG-1000",
+          "aircraftReg": "CC-CHF",
+          "route": "SCIE -> SCCI",
+          "hours": 3.97,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-08-03",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-ZBF",
+          "route": "SCAR -> SAEZ",
+          "hours": 1.15,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "diego_fuentes",
+      "name": "Diego Fuentes",
+      "licenseNumber": "CL-CPL-00321",
+      "nationality": "Chile",
+      "dateOfBirth": "5/30/1989",
+      "licenseType": "CPL(A)",
+      "licenseIssueDate": "1/10/2020",
+      "licenseExpiryDate": "1/10/2026",
+      "totalFlights": 24,
+      "totalHours": 47.53,
+      "dayHours": 26.17,
+      "nightHours": 21.36,
+      "picHours": 47.53,
+      "sicHours": 0,
+      "ifrHours": 12.05,
+      "aircraftTypes": [
+        "Beechcraft King Air C90",
+        "Diamond DA42",
+        "Ozone Delta 4 (Paraglider)",
+        "Schleicher ASK 21",
+        "Cessna 208B Grand Caravan",
+        "Cessna 182T",
+        "Diamond DA40",
+        "Piper PA-34 Seneca",
+        "Embraer Phenom 300",
+        "Tecnam P92",
+        "Airbus H125",
+        "Cessna 172N",
+        "Pilatus PC-12",
+        "Cessna Citation M2"
+      ],
+      "lastFlightDate": "2025-08-03",
+      "flights": [
+        {
+          "date": "2023-12-15",
+          "aircraft": "Beechcraft King Air C90",
+          "aircraftReg": "CC-QWP",
+          "route": "SCVD -> SCSE",
+          "hours": 2.73,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-02-06",
+          "aircraft": "Diamond DA42",
+          "aircraftReg": "CC-KFZ",
+          "route": "SCTE -> SCJO",
+          "hours": 1.95,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-08",
+          "aircraft": "Ozone Delta 4 (Paraglider)",
+          "aircraftReg": "CC-DMO",
+          "route": "SCFA -> SCCI",
+          "hours": 1.92,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-11-29",
+          "aircraft": "Schleicher ASK 21",
+          "aircraftReg": "CC-GEL",
+          "route": "SCIE -> SCDA",
+          "hours": 2.63,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-10-12",
+          "aircraft": "Cessna 208B Grand Caravan",
+          "aircraftReg": "CC-ROI",
+          "route": "SCFA -> SCAR",
+          "hours": 2.82,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2024-02-15",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-VBI",
+          "route": "SCDA -> SCVD",
+          "hours": 3.68,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-10-16",
+          "aircraft": "Diamond DA40",
+          "aircraftReg": "CC-HBU",
+          "route": "SCCF -> SCVD",
+          "hours": 3.02,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-11-28",
+          "aircraft": "Piper PA-34 Seneca",
+          "aircraftReg": "CC-RXQ",
+          "route": "SCFA -> SCJO",
+          "hours": 0.87,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-01",
+          "aircraft": "Embraer Phenom 300",
+          "aircraftReg": "CC-YXP",
+          "route": "SCVD -> SCTE",
+          "hours": 0.52,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-11-27",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-SVX",
+          "route": "SCCI -> SCTE",
+          "hours": 0.68,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-08-03",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-KSB",
+          "route": "SCVD -> SCBA",
+          "hours": 0.93,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-03-16",
+          "aircraft": "Airbus H125",
+          "aircraftReg": "CC-HPW",
+          "route": "SCTE -> SCEL",
+          "hours": 2.93,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-11-27",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-OSD",
+          "route": "SAEZ -> SPJC",
+          "hours": 0.92,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-04",
+          "aircraft": "Cessna 208B Grand Caravan",
+          "aircraftReg": "CC-AHH",
+          "route": "SAEZ -> SCJO",
+          "hours": 1.12,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-19",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-WIS",
+          "route": "SCFA -> SCVD",
+          "hours": 1.65,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-06-18",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-WHU",
+          "route": "SCIE -> SCCF",
+          "hours": 0.9,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-10-09",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-QWW",
+          "route": "SAEZ -> SCTE",
+          "hours": 3.37,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-12-13",
+          "aircraft": "Pilatus PC-12",
+          "aircraftReg": "CC-LIP",
+          "route": "SCBA -> SCIE",
+          "hours": 1.48,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-28",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-TED",
+          "route": "SCTE -> SCCF",
+          "hours": 1.12,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-07-20",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-HMC",
+          "route": "SCTE -> SCDA",
+          "hours": 1.25,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-05-31",
+          "aircraft": "Ozone Delta 4 (Paraglider)",
+          "aircraftReg": "CC-UCW",
+          "route": "SCDA -> SCEL",
+          "hours": 2.53,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-07-19",
+          "aircraft": "Cessna Citation M2",
+          "aircraftReg": "CC-LXK",
+          "route": "SAEZ -> SCJO",
+          "hours": 3.23,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-06-12",
+          "aircraft": "Tecnam P92",
+          "aircraftReg": "CC-AHT",
+          "route": "SCCF -> SCIE",
+          "hours": 2.3,
+          "role": "PIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2023-10-16",
+          "aircraft": "Cessna 182T",
+          "aircraftReg": "CC-TEJ",
+          "route": "SCVD -> SCAR",
+          "hours": 2.98,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": true
+        }
+      ]
+    },
+    {
+      "id": "sofia_rojas",
+      "name": "Sofia Rojas",
+      "licenseNumber": "CL987654PPL",
+      "nationality": "Chilean",
+      "dateOfBirth": "5/12/1999",
+      "licenseType": "PPL",
+      "licenseIssueDate": "4/15/2025",
+      "licenseExpiryDate": "4/15/2030",
+      "totalFlights": 18,
+      "totalHours": 30.84,
+      "dayHours": 27.09,
+      "nightHours": 3.75,
+      "picHours": 4.25,
+      "sicHours": 15.84,
+      "ifrHours": 6,
+      "aircraftTypes": [
+        "Cessna 172S",
+        "Cessna 182"
+      ],
+      "lastFlightDate": "2025-03-02",
+      "flights": [
+        {
+          "date": "2024-11-05",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.5,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-08",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.25,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-12",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCSC",
+          "hours": 2.17,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-13",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCSC -> SCTB",
+          "hours": 2.08,
+          "role": "PIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-18",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.75,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2024-11-22",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCEL",
+          "hours": 1.42,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-11-28",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 2,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2024-12-04",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.83,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2024-12-10",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 2.5,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-05",
+          "aircraft": "Cessna 182",
+          "aircraftReg": "CC-PZK",
+          "route": "SCTB -> SCPF",
+          "hours": 2.75,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-08",
+          "aircraft": "Cessna 182",
+          "aircraftReg": "CC-PZK",
+          "route": "SCPF -> SCTB",
+          "hours": 2.92,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-20",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.5,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-01",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 1.33,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-05",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCEL",
+          "hours": 0.67,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-05",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCEL -> SCTB",
+          "hours": 0.75,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-15",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCTB",
+          "hours": 2.17,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-02",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCTB -> SCSL",
+          "hours": 1.17,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-02",
+          "aircraft": "Cessna 172S",
+          "aircraftReg": "CC-PZA",
+          "route": "SCSL -> SCTB",
+          "hours": 1.08,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "matias_torres",
+      "name": "Matias Torres",
+      "licenseNumber": "CL564321CPL",
+      "nationality": "Chilean",
+      "dateOfBirth": "11/20/1992",
+      "licenseType": "CPL",
+      "licenseIssueDate": "8/1/2020",
+      "licenseExpiryDate": "8/1/2026",
+      "totalFlights": 20,
+      "totalHours": 37.08,
+      "dayHours": 27.58,
+      "nightHours": 9.5,
+      "picHours": 0,
+      "sicHours": 16.42,
+      "ifrHours": 17.25,
+      "aircraftTypes": [
+        "Cessna 172N",
+        "Piper PA-44 Seminole",
+        "FNPT II Mechtronix",
+        "Beechcraft Baron G58"
+      ],
+      "lastFlightDate": "2025-04-02",
+      "flights": [
+        {
+          "date": "2025-01-15",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCEL",
+          "hours": 1.75,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-17",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCSE",
+          "hours": 2.33,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-17",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCSE -> SCEL",
+          "hours": 2.25,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-20",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCEL -> SCEL",
+          "hours": 1.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-22",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCEL",
+          "hours": 2,
+          "role": "",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-01-25",
+          "aircraft": "FNPT II Mechtronix",
+          "aircraftReg": "CC-POL",
+          "route": "SCEL -> SCEL",
+          "hours": 1,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-28",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCEL -> SCDA",
+          "hours": 1.92,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-01-28",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCDA -> SCEL",
+          "hours": 1.83,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-03",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCEL",
+          "hours": 1.5,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-05",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCEL -> SCEL",
+          "hours": 2,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-01",
+          "aircraft": "Beechcraft Baron G58",
+          "aircraftReg": "CC-DTG",
+          "route": "SCEL -> SCFA",
+          "hours": 2.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-01",
+          "aircraft": "Beechcraft Baron G58",
+          "aircraftReg": "CC-DTG",
+          "route": "SCFA -> SCEL",
+          "hours": 2.42,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-05",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZC",
+          "route": "SCEL -> SCEL",
+          "hours": 1,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-08",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCTB",
+          "hours": 0.75,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-15",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCEL -> SCIE",
+          "hours": 1.33,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-15",
+          "aircraft": "Piper PA-44 Seminole",
+          "aircraftReg": "CC-DTF",
+          "route": "SCIE -> SCEL",
+          "hours": 1.25,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-20",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZC",
+          "route": "SCEL -> SCEL",
+          "hours": 2,
+          "role": "",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-25",
+          "aircraft": "Beechcraft Baron G58",
+          "aircraftReg": "CC-DTG",
+          "route": "SCEL -> SCAR",
+          "hours": 3.17,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-25",
+          "aircraft": "Beechcraft Baron G58",
+          "aircraftReg": "CC-DTG",
+          "route": "SCAR -> SCEL",
+          "hours": 3.08,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-02",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-PZB",
+          "route": "SCEL -> SCEL",
+          "hours": 1.5,
+          "role": "",
+          "rules": "VFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "isabella_costa",
+      "name": "Isabella Costa",
+      "licenseNumber": "BR852369ATPL",
+      "nationality": "Brazilian",
+      "dateOfBirth": "3/25/1995",
+      "licenseType": "ATPL",
+      "licenseIssueDate": "7/11/2023",
+      "licenseExpiryDate": "7/11/2028",
+      "totalFlights": 22,
+      "totalHours": 80.26,
+      "dayHours": 28,
+      "nightHours": 52.26,
+      "picHours": 0,
+      "sicHours": 0,
+      "ifrHours": 80.26,
+      "aircraftTypes": [
+        "Airbus A320neo",
+        "Airbus A321",
+        "Airbus A320",
+        "Airbus A319"
+      ],
+      "lastFlightDate": "2025-04-03",
+      "flights": [
+        {
+          "date": "2025-02-10",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAS",
+          "route": "SCEL -> SPJC",
+          "hours": 3.75,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-02-10",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAS",
+          "route": "SPJC -> SCEL",
+          "hours": 3.5,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-02-12",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAW",
+          "route": "SCEL -> SCDA",
+          "hours": 0.92,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-12",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAW",
+          "route": "SCDA -> SCEL",
+          "hours": 0.83,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-14",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAT",
+          "route": "SCEL -> SAEZ",
+          "hours": 2.08,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-15",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAT",
+          "route": "SAEZ -> SCEL",
+          "hours": 2.17,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-18",
+          "aircraft": "Airbus A320",
+          "aircraftReg": "CC-BAR",
+          "route": "SCEL -> SBGR",
+          "hours": 3.42,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-02-18",
+          "aircraft": "Airbus A320",
+          "aircraftReg": "CC-BAR",
+          "route": "SBGR -> SCEL",
+          "hours": 3.67,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-02-24",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAV",
+          "route": "SCEL -> KMIA",
+          "hours": 8.17,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-02-25",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAV",
+          "route": "KMIA -> SCEL",
+          "hours": 7.92,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-03",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAX",
+          "route": "SCEL -> SUMU",
+          "hours": 2.25,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-03",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAX",
+          "route": "SUMU -> SCEL",
+          "hours": 2.33,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-06",
+          "aircraft": "Airbus A319",
+          "aircraftReg": "CC-BDE",
+          "route": "SCEL -> SPHI",
+          "hours": 2.83,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-06",
+          "aircraft": "Airbus A319",
+          "aircraftReg": "CC-BDE",
+          "route": "SPHI -> SCEL",
+          "hours": 2.67,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-15",
+          "aircraft": "Airbus A320",
+          "aircraftReg": "CC-BAZ",
+          "route": "SCEL -> SEQM",
+          "hours": 4.17,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-15",
+          "aircraft": "Airbus A320",
+          "aircraftReg": "CC-BAZ",
+          "route": "SEQM -> SCEL",
+          "hours": 4,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-18",
+          "aircraft": "Airbus A319",
+          "aircraftReg": "CC-BDE",
+          "route": "SCEL -> SCCF",
+          "hours": 1.83,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-18",
+          "aircraft": "Airbus A319",
+          "aircraftReg": "CC-BDE",
+          "route": "SCCF -> SCEL",
+          "hours": 1.75,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-22",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAW",
+          "route": "SCEL -> SCIP",
+          "hours": 5.17,
+          "role": "",
+          "rules": "IFR",
+          "night": false
+        },
+        {
+          "date": "2025-03-24",
+          "aircraft": "Airbus A321",
+          "aircraftReg": "CC-BAW",
+          "route": "SCIP -> SCEL",
+          "hours": 4.92,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-02",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAV",
+          "route": "SCEL -> SKBO",
+          "hours": 6.08,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-03",
+          "aircraft": "Airbus A320neo",
+          "aircraftReg": "CC-BAV",
+          "route": "SKBO -> SCEL",
+          "hours": 5.83,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        }
+      ]
+    },
+    {
+      "id": "liam_oconnell",
+      "name": "Liam O'Connell",
+      "licenseNumber": "US445588ATPL",
+      "nationality": "American",
+      "dateOfBirth": "8/15/1985",
+      "licenseType": "ATPL",
+      "licenseIssueDate": "2/20/2010",
+      "licenseExpiryDate": "2/20/2026",
+      "totalFlights": 18,
+      "totalHours": 217,
+      "dayHours": 0,
+      "nightHours": 217,
+      "picHours": 0,
+      "sicHours": 217,
+      "ifrHours": 217,
+      "aircraftTypes": [
+        "Boeing 787-9",
+        "Boeing 787-8"
+      ],
+      "lastFlightDate": "2025-05-03",
+      "flights": [
+        {
+          "date": "2025-03-02",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGA",
+          "route": "SCEL -> KJFK",
+          "hours": 10.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-04",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGA",
+          "route": "KJFK -> SCEL",
+          "hours": 10.83,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-07",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGB",
+          "route": "SCEL -> LEMD",
+          "hours": 12.75,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-09",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGB",
+          "route": "LEMD -> SCEL",
+          "hours": 13.17,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-12",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGE",
+          "route": "SCEL -> LFPG",
+          "hours": 14.08,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-14",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGE",
+          "route": "LFPG -> SCEL",
+          "hours": 14.42,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-21",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGC",
+          "route": "SCEL -> YSSY",
+          "hours": 14.17,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-03-23",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGC",
+          "route": "YSSY -> SCEL",
+          "hours": 13,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-01",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGF",
+          "route": "SCEL -> MMMX",
+          "hours": 7.75,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-02",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGF",
+          "route": "MMMX -> SCEL",
+          "hours": 7.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-05",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGD",
+          "route": "SCEL -> NZAA",
+          "hours": 11.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-07",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGD",
+          "route": "NZAA -> SCEL",
+          "hours": 11.17,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-18",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGA",
+          "route": "SCEL -> LEMD",
+          "hours": 12.83,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-20",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGA",
+          "route": "LEMD -> SCEL",
+          "hours": 13.25,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-25",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGB",
+          "route": "SCEL -> KJFK",
+          "hours": 10.58,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-27",
+          "aircraft": "Boeing 787-9",
+          "aircraftReg": "CC-BGB",
+          "route": "KJFK -> SCEL",
+          "hours": 10.75,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-05-01",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGE",
+          "route": "SCEL -> LFPG",
+          "hours": 14.25,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        },
+        {
+          "date": "2025-05-03",
+          "aircraft": "Boeing 787-8",
+          "aircraftReg": "CC-BGE",
+          "route": "LFPG -> SCEL",
+          "hours": 14.5,
+          "role": "SIC",
+          "rules": "IFR",
+          "night": true
+        }
+      ]
+    },
+    {
+      "id": "javier_nunez",
+      "name": "Javier Nunez",
+      "licenseNumber": "CL223344CPLH",
+      "nationality": "Chilean",
+      "dateOfBirth": "1/30/1990",
+      "licenseType": "CPL(H)",
+      "licenseIssueDate": "6/10/2019",
+      "licenseExpiryDate": "6/10/2025",
+      "totalFlights": 10,
+      "totalHours": 14.68,
+      "dayHours": 12.68,
+      "nightHours": 2,
+      "picHours": 0,
+      "sicHours": 12.68,
+      "ifrHours": 0,
+      "aircraftTypes": [
+        "Robinson R44",
+        "Bell 206"
+      ],
+      "lastFlightDate": "2025-05-05",
+      "flights": [
+        {
+          "date": "2025-04-01",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCQN",
+          "hours": 1.25,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-03",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCSN",
+          "hours": 0.75,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-05",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCSN -> SCQN",
+          "hours": 0.67,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-08",
+          "aircraft": "Bell 206",
+          "aircraftReg": "CC-AHT",
+          "route": "SCEL -> SCEL",
+          "hours": 2.5,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-10",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCQN",
+          "hours": 2,
+          "role": "",
+          "rules": "VFR",
+          "night": true
+        },
+        {
+          "date": "2025-04-15",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCEL",
+          "hours": 0.92,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-18",
+          "aircraft": "Bell 206",
+          "aircraftReg": "CC-AHT",
+          "route": "SCEL -> SCEL",
+          "hours": 3.17,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-22",
+          "aircraft": "Bell 206",
+          "aircraftReg": "CC-AHT",
+          "route": "SCEL -> SCTB",
+          "hours": 0.67,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-04-25",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCQN",
+          "hours": 1.75,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        },
+        {
+          "date": "2025-05-05",
+          "aircraft": "Robinson R44",
+          "aircraftReg": "CC-AHV",
+          "route": "SCQN -> SCQN",
+          "hours": 1,
+          "role": "SIC",
+          "rules": "VFR",
+          "night": false
+        }
+      ]
+    },
+    {
+      "id": "acacio_morales",
+      "name": "Acacio Morales",
+      "licenseNumber": "US666ATPL",
+      "nationality": "Venecozuelan",
+      "dateOfBirth": "1/1/1980",
+      "licenseType": "PPL",
+      "licenseIssueDate": "12/31/2020",
+      "licenseExpiryDate": "1/1/2030",
+      "totalFlights": 1,
+      "totalHours": 2.17,
+      "dayHours": 0,
+      "nightHours": 2.17,
+      "picHours": 0,
+      "sicHours": 0,
+      "ifrHours": 2.17,
+      "aircraftTypes": [
+        "Cessna 172N"
+      ],
+      "lastFlightDate": "2025-09-30",
+      "flights": [
+        {
+          "date": "2025-09-30",
+          "aircraft": "Cessna 172N",
+          "aircraftReg": "CC-QLO",
+          "route": "KJFK -> SCAR",
+          "hours": 2.17,
+          "role": "",
+          "rules": "IFR",
+          "night": true
+        }
+      ]
+    }
+  ]
+}

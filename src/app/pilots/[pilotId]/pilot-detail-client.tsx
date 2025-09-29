@@ -68,8 +68,10 @@ export default function PilotDetailClient({
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-3xl font-semibold">{pilot.name}</CardTitle>
+            {/* Safe optional access to aircraftTypes to avoid build errors if missing */}
             <p className="text-sm text-muted-foreground">
-              Active on {pilot.aircraftTypes.length} aircraft type{pilot.aircraftTypes.length === 1 ? '' : 's'}
+              Active on {(pilot.aircraftTypes?.length ?? 0)} aircraft type
+              {(pilot.aircraftTypes?.length ?? 0) === 1 ? '' : 's'}
             </p>
           </CardHeader>
           <CardContent>
@@ -81,10 +83,6 @@ export default function PilotDetailClient({
               <div className="rounded-xl border bg-muted/50 p-4 text-center">
                 <dt className="text-xs uppercase tracking-wide text-muted-foreground">Flights Logged</dt>
                 <dd className="text-2xl font-semibold">{pilot.totalFlights}</dd>
-              </div>
-              <div className="rounded-xl border bg-muted/50 p-4 text-center">
-                <dt className="text-xs uppercase tracking-wide text-muted-foreground">Last Flight</dt>
-                <dd className="text-2xl font-semibold">{formatDate(pilot.lastFlightDate)}</dd>
               </div>
             </dl>
           </CardContent>
@@ -118,7 +116,7 @@ export default function PilotDetailClient({
           <CardHeader>
             <CardTitle>Monthly Hours Trend</CardTitle>
           </CardHeader>
-          <CardContent className="h-80">
+        <CardContent className="h-80">
             {monthlyTotals.length === 0 ? (
               <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
                 No flights recorded for charting yet.

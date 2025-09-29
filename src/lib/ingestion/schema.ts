@@ -10,19 +10,27 @@ export const FlightSchema = z.object({
 export const PilotSchema = z.object({
   id: z.string(),
   name: z.string(),
+  licenseNumber: z.string().optional(),
+  nationality: z.string().optional(),
+  dateOfBirth: z.string().optional(),
+  licenseType: z.string().optional(),
+  licenseIssueDate: z.string().optional(),
+  licenseExpiryDate: z.string().optional(),
   totalFlights: z.number(),
   totalHours: z.number(),
-  lastFlightDate: z.string().optional(),
-  aircraftTypes: z.array(z.string()),
+  dayHours: z.number().optional(),
+  nightHours: z.number().optional(),
+  picHours: z.number().optional(),
+  sicHours: z.number().optional(),
+  ifrHours: z.number().optional(),
   flights: z.array(FlightSchema),
+    // NEW fields produced by the ingester
+  aircraftTypes: z.array(z.string()).optional(),
+  lastFlightDate: z.string().optional(),
+
 });
 
 export const MetricsSchema = z.object({
-  generatedAt: z.string(),
-  summary: z.object({
-    totalFlights: z.number(),
-    totalHours: z.number(),
-  }),
   pilots: z.array(PilotSchema),
 });
 

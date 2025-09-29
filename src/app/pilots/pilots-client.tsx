@@ -54,14 +54,7 @@ export default function PilotsClient({ fallbackData }: { fallbackData: Metrics }
                   <dt className="font-medium text-foreground">Flights</dt>
                   <dd>{pilot.totalFlights}</dd>
                 </div>
-                <div className="flex items-center justify-between">
-                  <dt className="font-medium text-foreground">Last Flight</dt>
-                  <dd>
-                    {pilot.lastFlightDate
-                      ? new Date(pilot.lastFlightDate).toLocaleDateString()
-                      : 'N/A'}
-                  </dd>
-                </div>
+
               </dl>
             </CardContent>
           </Card>
