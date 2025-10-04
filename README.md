@@ -1,3 +1,5 @@
+![CI](https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg)
+
 # Pilot Logbook Dashboard Prototype
 
 This project is a front-end prototype of a public, read-only pilot logbook dashboard.
@@ -56,3 +58,7 @@ This project is a front-end prototype of a public, read-only pilot logbook dashb
 - The `metrics.json` file is stored in Vercel Blob.
 - The ingestion worker writes to the Blob with atomic writes and last-good fallback.
 - The UI reads from the Blob with ISR revalidation.
+
+## How it verifies
+
+The GitHub Actions CI workflow runs `pnpm install`, `pnpm typecheck`, `pnpm test`, and `pnpm build` to ensure dependencies install cleanly, the TypeScript project compiles, helper/adapter tests pass, and the application builds without errors.

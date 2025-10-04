@@ -1,114 +1,240 @@
-import PilotGrid from "@/components/PilotGrid";
-import PilotProfileCard from "@/components/dashboard/PilotProfileCard";
-import FlightHoursCard from "@/components/dashboard/FlightHoursCard";
-import LastFlightCard from "@/components/dashboard/LastFlightCard";
-import CertificationsCard from "@/components/dashboard/CertificationsCard";
-import FlightHoursPie from "@/components/dashboard/FlightHoursPie";
+import path from "node:path";
+import { promises as fs } from "node:fs";
+
+import EnhancedPilotDashboard from "@/components/EnhancedPilotDashboard";
+import { toDashboardMetrics } from "@/lib/adapters/toDashboardMetrics";
+import { hhmmToDecimal, toIsoDate } from "@/lib/time";
+import {
+  MetricsData,
+  MetricsDataSchema,
+  MetricsView,
+  MetricsViewSchema,
+} from "@/types/metrics";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
-type Flight = {
-  date?: string;
-  hours?: number;
-  route?: string;
-  aircraft?: string;
-  aircraftReg?: string;
-  aircraftType?: string;
-  category?: string;
-};
+type MetricsInput = MetricsData | MetricsView;
 
-type Pilot = {
+type CsvModule = typeof import("csv-parse/sync");
+
+type PilotAccumulator = {
   id: string;
   name: string;
-  totalFlights: number;
-  totalHours: number;
-  lastFlightDate?: string;
-  flights?: Flight[];
+  licenseNumber?: string;
+  nationality?: string;
+  dateOfBirth?: string;
+  licenseType?: string;
+  licenseIssueDate?: string;
+  licenseExpiryDate?: string;
+  flights: Record<string, unknown>[];
+  aircraftTypes: Set<string>;
 };
 
-type Metrics = {
-  summary: { totalFlights: number; totalHours: number };
-  pilots: Pilot[];
-};
-
-async function loadMetrics(): Promise<Metrics> {
-  const base = process.env.NEXT_PUBLIC_BLOB_URL_BASE!;
-  const init: RequestInit = process.env.NODE_ENV === "development" ? { cache: "no-store" } : {};
-  const r = await fetch(`${base}/metrics.json?ts=${Date.now()}`, init);
-  if (!r.ok) throw new Error(`metrics.json ${r.status}`);
-  return r.json();
+async function fileExists(filePath: string): Promise<boolean> {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { pilotId?: string };
-}) {
+async function fileHasContent(filePath: string): Promise<boolean> {
+  if (!(await fileExists(filePath))) {
+    return false;
+  }
+  const stats = await fs.stat(filePath);
+  return stats.size > 0;
+}
+
+async function loadJsonFile<T>(
+  filePath: string,
+  schema: { parse: (input: unknown) => T }
+): Promise<T | null> {
+  if (!(await fileHasContent(filePath))) {
+    return null;
+  }
   try {
-    const metrics = await loadMetrics();
+    const buffer = await fs.readFile(filePath);
+    const text = buffer.toString("utf8").replace(/^\uFEFF/, "").trim();
+    if (!text) return null;
+    const parsed = JSON.parse(text);
+    return schema.parse(parsed);
+  } catch (error) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn(`Failed to load ${path.basename(filePath)}:`, error);
+    }
+    return null;
+  }
+}
 
-    const selectedPilotId = searchParams.pilotId;
-    const selectedPilot = selectedPilotId
-      ? metrics.pilots.find((pilot) => pilot.id === selectedPilotId) ?? null
-      : null;
+function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
 
-    if (!selectedPilot) {
-      return (
-        <main className="mx-auto max-w-7xl p-6 space-y-6">
-          <h1 className="text-2xl font-semibold">Pilot Logbook</h1>
+function normalizeRoute(from?: string, to?: string): string | undefined {
+  const origin = from?.trim();
+  const destination = to?.trim();
+  if (!origin && !destination) return undefined;
+  if (origin && destination) return `${origin} -> ${destination}`;
+  return origin ?? destination ?? undefined;
+}
 
-          <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-2xl border p-4">
-              <div className="text-sm opacity-70">Flights</div>
-              <div
-                className="text-3xl font-semibold"
-                data-testid="summary-total-flights"
-              >
-                {metrics.summary?.totalFlights ?? 0}
-              </div>
-            </div>
-            <div className="rounded-2xl border p-4">
-              <div className="text-sm opacity-70">Total Hours</div>
-              <div
-                className="text-3xl font-semibold"
-                data-testid="summary-total-hours"
-              >
-                {metrics.summary?.totalHours ?? 0}
-              </div>
-            </div>
-          </section>
+async function loadFromCsv(filePath: string): Promise<MetricsView | null> {
+  if (!(await fileHasContent(filePath))) {
+    return null;
+  }
 
-          <PilotGrid pilots={metrics.pilots || []} />
-        </main>
-      );
+  const csvText = await fs.readFile(filePath, "utf8");
+  if (!csvText.trim()) {
+    return { pilots: [] };
+  }
+
+  const { parse }: CsvModule = await import("csv-parse/sync");
+  const records = parse(csvText, {
+    columns: true,
+    skip_empty_lines: true,
+  }) as Record<string, string>[];
+
+  const rows = records.slice(0, 200);
+  const pilots = new Map<string, PilotAccumulator>();
+
+  for (const row of rows) {
+    const name = row["Pilot Full Name"]?.trim();
+    if (!name) continue;
+
+    const id = slugify(name);
+    if (!pilots.has(id)) {
+      pilots.set(id, {
+        id,
+        name,
+        licenseNumber: row["License Number"]?.trim(),
+        nationality: row["Nationality"]?.trim(),
+        dateOfBirth: row["Date of Birth"]?.trim(),
+        licenseType: row["License Type"]?.trim(),
+        licenseIssueDate: row["License Issue Date"]?.trim(),
+        licenseExpiryDate: row["License Expiry Date"]?.trim(),
+        flights: [],
+        aircraftTypes: new Set<string>(),
+      });
     }
 
-    return (
-      <main className="mx-auto max-w-7xl p-6 space-y-8">
-        <h1 className="text-2xl font-semibold">Pilot Logbook</h1>
+    const pilot = pilots.get(id)!;
+    const aircraft =
+      row["Aircraft Make/Model"]?.trim() ||
+      row["Aircraft Type"]?.trim() ||
+      row["Aircraft Model"]?.trim();
+    if (aircraft) {
+      pilot.aircraftTypes.add(aircraft);
+    }
 
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <PilotProfileCard pilot={selectedPilot} />
-          <FlightHoursCard pilot={selectedPilot} />
-          <LastFlightCard pilot={selectedPilot} />
-        </section>
+    const flightTime = hhmmToDecimal(row["Total Flight Time (HH:MM)"]);
+    const nightTime = hhmmToDecimal(row["Night Time (HH:MM)"]);
+    const ifrTime = hhmmToDecimal(row["IFR Time (HH:MM)"]);
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <CertificationsCard />
-          <FlightHoursPie pilot={selectedPilot} />
-        </section>
-      </main>
-    );
-  } catch (error) {
-    console.error("Failed to load metrics", error);
-    return (
-      <main className="mx-auto max-w-3xl p-6 space-y-4">
-        <h1 className="text-2xl font-semibold">Pilot Logbook</h1>
-        <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          {"It isn't loaded"}
-        </div>
-      </main>
-    );
+    const flight: Record<string, unknown> = {
+      date: toIsoDate(row["Flight Date"] ?? ""),
+      aircraft,
+      aircraftReg: row["Aircraft Registration"]?.trim(),
+      route: normalizeRoute(row["Route From (ICAO)"], row["Route To (ICAO)"]),
+      hours: flightTime,
+      night: nightTime > 0,
+      approachType: row["Approach Type"]?.trim(),
+      approachCount: row["Approach Count"]?.trim(),
+      simulatorType: row["Simulator Type"]?.trim(),
+      simulatorTime: row["Simulator Time (HH:MM)"]?.trim(),
+      crossCountryTime: row["Cross Country Time (HH:MM)"]?.trim(),
+      soloTime: row["Solo Time (HH:MM)"]?.trim(),
+      picTime: row["PIC Time (HH:MM)"]?.trim(),
+      sicTime: row["SIC Time (HH:MM)"]?.trim(),
+      dualReceived: row["Dual Received (HH:MM)"]?.trim(),
+      instructorTime: row["Instructor Time (HH:MM)"]?.trim(),
+      remarks: row["Remarks"]?.trim(),
+      Role: row["Role"]?.trim(),
+      Rules: row["Rules"]?.trim(),
+      "Day Time (HH:MM)": row["Day Time (HH:MM)"],
+      "Night Time (HH:MM)": row["Night Time (HH:MM)"],
+      "IFR Time (HH:MM)": row["IFR Time (HH:MM)"],
+      "PIC Time (HH:MM)": row["PIC Time (HH:MM)"],
+      "SIC Time (HH:MM)": row["SIC Time (HH:MM)"],
+      "Simulator Time (HH:MM)": row["Simulator Time (HH:MM)"],
+      "Cross Country Time (HH:MM)": row["Cross Country Time (HH:MM)"],
+      "Solo Time (HH:MM)": row["Solo Time (HH:MM)"],
+      "Dual Received (HH:MM)": row["Dual Received (HH:MM)"],
+      "Instructor Time (HH:MM)": row["Instructor Time (HH:MM)"],
+      "Aircraft LSA": row["Aircraft LSA"],
+      "Aircraft Single Engine": row["Aircraft Single Engine"],
+      "Aircraft Multi Engine": row["Aircraft Multi Engine"],
+      "Aircraft Turboprop": row["Aircraft Turboprop"],
+      "Aircraft Turbojet": row["Aircraft Turbojet"],
+      "Aircraft Helicopter": row["Aircraft Helicopter"],
+      "Aircraft Glider": row["Aircraft Glider"],
+      "Aircraft Ultralight Motorized": row["Aircraft Ultralight Motorized"],
+      "Aircraft Ultralight Non-Motorized": row["Aircraft Ultralight Non-Motorized"],
+    };
+
+    if (!flight.Rules && ifrTime > 0) {
+      flight.Rules = "IFR";
+    } else if (!flight.Rules && flightTime > 0) {
+      flight.Rules = "VFR";
+    }
+
+    pilot.flights.push(flight);
   }
+
+  const pilotList = Array.from(pilots.values()).map((pilot) => ({
+    id: pilot.id,
+    name: pilot.name,
+    licenseNumber: pilot.licenseNumber,
+    nationality: pilot.nationality,
+    dateOfBirth: pilot.dateOfBirth,
+    licenseType: pilot.licenseType,
+    licenseIssueDate: pilot.licenseIssueDate,
+    licenseExpiryDate: pilot.licenseExpiryDate,
+    aircraftTypes: pilot.aircraftTypes.size
+      ? Array.from(pilot.aircraftTypes.values())
+      : undefined,
+    flights: pilot.flights,
+  }));
+
+  return { pilots: pilotList };
+}
+
+async function loadMetrics(): Promise<MetricsInput> {
+  const baseDir = process.cwd();
+  const metricsPath = path.join(baseDir, "metrics.json");
+  const viewPath = path.join(baseDir, "metrics.view.json");
+  const csvPath = path.join(baseDir, "source.csv");
+
+  const metricsData = await loadJsonFile(metricsPath, MetricsDataSchema);
+  if (metricsData && (metricsData.summary || metricsData.pilots)) {
+    return metricsData;
+  }
+
+  const metricsView = await loadJsonFile(viewPath, MetricsViewSchema);
+  if (metricsView) {
+    return metricsView;
+  }
+
+  const fallback = await loadFromCsv(csvPath);
+  if (fallback) {
+    return fallback;
+  }
+
+  return { pilots: [] };
+}
+
+export default async function Page() {
+  const data = await loadMetrics();
+  const metrics = toDashboardMetrics(data);
+
+  return (
+    <main className="mx-auto max-w-7xl p-6">
+      <EnhancedPilotDashboard metrics={metrics} />
+    </main>
+  );
 }
