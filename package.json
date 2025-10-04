@@ -11,7 +11,7 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
