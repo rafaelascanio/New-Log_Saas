@@ -1,3 +1,5 @@
+![CI](https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg)
+
 # Pilot Logbook Dashboard Prototype
 
 This project is a front-end prototype of a public, read-only pilot logbook dashboard.
@@ -38,6 +40,13 @@ This project is a front-end prototype of a public, read-only pilot logbook dashb
     npm run dev
     ```
 
+## Local run
+
+```bash
+npm install
+npm run dev
+```
+
 ## Freshness Badge and Stale Banner
 
 - The UI displays a "Last updated" badge with the timestamp from `metrics.json.updatedAt`.
@@ -56,3 +65,7 @@ This project is a front-end prototype of a public, read-only pilot logbook dashb
 - The `metrics.json` file is stored in Vercel Blob.
 - The ingestion worker writes to the Blob with atomic writes and last-good fallback.
 - The UI reads from the Blob with ISR revalidation.
+
+## How it verifies
+
+The GitHub Actions CI workflow runs `npm install`, `npm run typecheck`, `npm test`, and `npm run build` to ensure dependencies install cleanly, the TypeScript project compiles, helper/adapter tests pass, and the application builds without errors.

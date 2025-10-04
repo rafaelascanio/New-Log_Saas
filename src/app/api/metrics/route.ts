@@ -1,16 +1,17 @@
 import { NextResponse } from 'next/server';
 
-import { fetchMetricsJson, METRICS_REVALIDATE_SECONDS } from '@/src/lib/metrics/get-metrics';
+import { getMetrics } from '@/lib/metrics/get-metrics';
 
 export const revalidate = 0;
+const CACHE_SECONDS = 300;
 
 export async function GET() {
   try {
-    const metrics = await fetchMetricsJson();
+    const metrics = await getMetrics();
 
     return NextResponse.json(metrics, {
       headers: {
-        'Cache-Control': `s-maxage=${Math.floor(METRICS_REVALIDATE_SECONDS / 2)}, stale-while-revalidate=${METRICS_REVALIDATE_SECONDS}`,
+        'Cache-Control': `s-maxage=${CACHE_SECONDS}, stale-while-revalidate=${CACHE_SECONDS}`,
       },
     });
   } catch (error) {
