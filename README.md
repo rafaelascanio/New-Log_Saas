@@ -40,6 +40,13 @@ This project is a front-end prototype of a public, read-only pilot logbook dashb
     npm run dev
     ```
 
+## Local run
+
+```bash
+npm install
+npm run dev
+```
+
 ## Freshness Badge and Stale Banner
 
 - The UI displays a "Last updated" badge with the timestamp from `metrics.json.updatedAt`.
@@ -61,4 +68,4 @@ This project is a front-end prototype of a public, read-only pilot logbook dashb
 
 ## How it verifies
 
-The GitHub Actions CI workflow runs `pnpm install`, `pnpm typecheck`, `pnpm test`, and `pnpm build` to ensure dependencies install cleanly, the TypeScript project compiles, helper/adapter tests pass, and the application builds without errors.
+The GitHub Actions CI workflow runs `npm install`, `npm run typecheck`, `npm test`, and `npm run build` to ensure dependencies install cleanly, the TypeScript project compiles, helper/adapter tests pass, and the application builds without errors.
