@@ -277,8 +277,9 @@ function normalizePilot(pilot: Record<string, unknown>): PilotMetricsFull {
     warnMissing("pilot", String(pilot.id ?? pilot.name ?? "unknown"), missingPilotKeys);
   }
 
-  const rawFlights: unknown = pilot.flights;
+  const rawFlights: unknown = (pilot as { flights?: unknown }).flights;
   const flightsSource = Array.isArray(rawFlights) ? rawFlights : [];
+  const flightsIterable = Array.isArray(flightsSource) ? flightsSource : [];
 
   let computedHours = 0;
   let computedDay = 0;
@@ -294,7 +295,7 @@ function normalizePilot(pilot: Record<string, unknown>): PilotMetricsFull {
 
   const pilotCategorySet = new Set<string>();
 
-  const flights = flightsSource.map((item, index) => {
+  const flights = flightsIterable.map((item, index) => {
     const record =
       typeof item === "object" && item !== null ? (item as Record<string, unknown>) : {};
     const missingFlightKeys = EXPECTED_FLIGHT_KEYS.filter((key) => !(key in record));

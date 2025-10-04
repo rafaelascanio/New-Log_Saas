@@ -16,4 +16,4 @@
 
 ## UI notes
 - The dashboard is rendered by `src/components/EnhancedPilotDashboard.tsx`.
-- Framer Motion is shimmed at `src/shims/framer-motion.tsx` because external installs are not available in the execution environment.
+- Framer Motion is available at runtime; during type-only checks a lightweight declaration lives at `src/types/framer-motion.d.ts` to satisfy the compiler when modules are not installed.
